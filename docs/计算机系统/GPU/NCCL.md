@@ -1,3 +1,9 @@
+---
+title: NCCL
+tags:
+  - nccl
+update: 2025-04-05
+---
 # 集体通信原语
 ## 原语介绍
 ### Broadcast

@@ -1,3 +1,9 @@
+---
+title: Nginx
+tags:
+  - nginx
+update: 2025-04-06
+---
 # Nginx概述
 Nginx (engine x)  是一款轻量级的 Web 服务器 、反向代理服务器及电子邮件（IMAP/POP3）代理服务器。
 ## 反向代理

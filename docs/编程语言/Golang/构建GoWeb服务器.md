@@ -1,3 +1,9 @@
+---
+title: 构建GoWeb服务器
+tags:
+  - golang
+update: 2025-04-05
+---
 ## http协议
 HTTP协议没有状态，即同一个客户端两次请求没有对应关系，为了解决这个问题引入session和cookie的概念
 ### HTTP Request

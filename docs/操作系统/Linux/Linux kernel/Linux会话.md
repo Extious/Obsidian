@@ -1,3 +1,9 @@
+---
+title: Linux会话
+tags:
+  - linux
+update: 2025-04-05
+---
 对于linux的终端内会话的管理，本文章介绍nohup和tmux的使用
 # nohup
 ## 介绍

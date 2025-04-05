@@ -1,3 +1,9 @@
+---
+title: Git基础
+tags:
+  - git
+update: 2025-04-06
+---
    ## 安装git
 网址[https://git-scm.com/downloads](https://git-scm.com/downloads)上安装
 安装之后要设置自身全局配置

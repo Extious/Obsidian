@@ -1,3 +1,9 @@
+---
+title: GPU通信方式
+tags:
+  - gpu
+update: 2025-04-05
+---
 # 单机多卡
 ## GPU Direct
 GPU Direct 是 NVIDIA 开发的一项技术，可实现 GPU 与其他设备（例如网络接口卡 (NIC) 和存储设备）之间的直接通信和数据传输，而不涉及 CPU。

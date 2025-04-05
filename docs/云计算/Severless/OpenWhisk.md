@@ -1,3 +1,9 @@
+---
+title: OpenWhisk
+tags:
+  - openwhisk
+update: 2025-04-06
+---
 # OpenWhisk 编程模型
 ![image](https://picture.zhaozhan.site/openwhisk-model.png)
 ### What is an Action?

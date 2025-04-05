@@ -1,3 +1,9 @@
+---
+title: Author
+tags:
+  - about
+update: 2025-04-06
+---
 # Who am I ?
 Just a person committed to leaving a footprint on the Internet.
 ## Undergraduate

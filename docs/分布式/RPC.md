@@ -1,3 +1,9 @@
+---
+title: RPC
+tags:
+  - rpc
+update: 2025-04-05
+---
 # 概念
 1. RPC（Remote Procedure Call Protocol） 远程过程调用协议。
 2. RPC是一种通过网络从远程计算机程序上请求服务，不需要了解底层网络技术的协议。

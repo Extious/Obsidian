@@ -1,3 +1,9 @@
+---
+title: Scala入门
+tags:
+  - scala
+update: 2025-04-05
+---
 ```scala
 
 /*

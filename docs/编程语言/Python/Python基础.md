@@ -1,3 +1,9 @@
+---
+title: Python基础
+tags:
+  - python
+update: 2025-04-05
+---
 # 基础语法
 ## print
 python代码一行行执行，字符串过长需要使用三引号

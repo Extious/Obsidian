@@ -1,3 +1,9 @@
+---
+title: Archlinux安装
+tags:
+  - linux
+update: 2025-04-05
+---
 # 启动U盘
 [下载镜像](https://archlinux.org/download/)
 [Ventoy烧录](https://www.ventoy.net/cn/doc_start.html)

@@ -1,3 +1,9 @@
+---
+title: 完整Git开发规范
+tags:
+  - git
+update: 2025-04-06
+---
 ## 分支策略
 ![image](https://picture.zhaozhan.site/git-strategy.png)
 1. **master**主分支,用于生产环境的主分支

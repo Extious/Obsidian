@@ -1,3 +1,9 @@
+---
+title: Go语言基础
+tags:
+  - golang
+update: 2025-04-05
+---
 # 环境配置
 ## Linux下go环境安装
 在官网上安装源码`.tar.gz`文件

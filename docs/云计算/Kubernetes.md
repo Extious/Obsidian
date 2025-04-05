@@ -1,3 +1,9 @@
+---
+title: Kubernetes
+tags:
+  - kubernetes
+update: 2025-04-06
+---
 # 概述
 如果一个容器发生故障，则你需要启动另一个容器
 Kubernetes 为你提供了一个可弹性运行分布式系统的框架。 Kubernetes 会满足你的扩展要求、故障转移你的应用、提供部署模式等。

@@ -1,3 +1,9 @@
+---
+title: WebSocket
+tags:
+  - websocket
+update: 2025-04-05
+---
 # 概述
 WebSocket 协议提供了一种全双工的通信机制, 服务端可以主动向客户端推送数据, WebSocket 协议采用了 HTTP 协议来握手, 与 HTTP 使用相同的默认端口, 这一切都是为了兼容现有的 HTTP 组件或代理, 但 WebSocket 与 HTTP 是相互独立的协议, 二者并不存在上下的层级关系, WebSocket 的正式协议文档为 [RFC 6455](https://link.zhihu.com/?target=https%3A//tools.ietf.org/html/rfc6455), 本文全面讨论 WebSocket 协议的设计与工作原理
 # 握手
