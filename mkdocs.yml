@@ -1,5 +1,6 @@
 # 网站名称
-site_name: obsidian-mkdocs template
+site_name: Note by Extious
+site_url: https://note.zhaozhan.site
 
 # 网站主题配置
 theme:
