@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "8ba9b58ee75c7fd3",
+    "type": "split",
+    "children": [
+      {
+        "id": "c64f6e3bec46e965",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e4f9419656aba42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Homepage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Homepage"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d8eeff0b6ce7b241",
+    "type": "split",
+    "children": [
+      {
+        "id": "c07c298e16b4f8d4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c49fab3429706be5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "fe5e9291bf76c478",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "mkdoc",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "6b72c4cfd92b508a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0f00b149254d88e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "82707086fbc9ff73",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64a60320482975b1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "版本控制/SVN/SVN基础.md",
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "SVN基础 的反向链接列表"
+            }
+          },
+          {
+            "id": "01ff5b21092ef6c3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "853227464277fbaa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "f5fc4bdc78c4b8db",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Homepage.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Homepage 的大纲"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
+    }
+  },
+  "active": "1e4f9419656aba42",
+  "lastOpenFiles": [
+    "工具/mkdocs-pulisher.md",
+    "编程语言/Golang/Go语言进阶.md",
+    "编程语言/Golang/Go语言基础.md",
+    "编程语言/Golang/构建GoWeb服务器.md",
+    "编程语言/Python/Python基础.md",
+    "templates/mkdocs.md",
+    "未命名.canvas",
+    "Project/helper.md",
+    "Homepage.md",
+    "2025-04-05.md",
+    "软件工程/版本控制/Git/Git基础.md",
+    "软件工程/版本控制/Git/完整Git开发规范.md",
+    "2025-04-09.md",
+    "操作系统/Linux/Linux kernel/Linux会话.md",
+    "操作系统/Linux/Linux kernel/Linux基础.md",
+    "编程语言/Scala/Scala入门.md",
+    "2025-04-06.md",
+    "云计算/Kubernetes.md",
+    "云计算/Docker.md",
+    "云计算/云原生概述.md",
+    "云计算/微服务概述.md",
+    "云计算/Severless/OpenWhisk.md",
+    "软件工程/Makefile基础.md",
+    "软件工程/设计模式.md",
+    "软件工程/Web开发/SSL证书.md",
+    "软件工程/Web开发/Nginx.md",
+    "软件工程/数据库/Redis/Redis基础.md",
+    "templates",
+    "工具",
+    "Project",
+    "分布式/存储",
+    "分布式",
+    "云计算/Kubernetes",
+    "编程语言/Scala",
+    "编程语言",
+    "云计算/Severless",
+    "云计算"
+  ]
+}
