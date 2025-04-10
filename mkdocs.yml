@@ -62,9 +62,6 @@ markdown_extensions:
 plugins:
   - search  # 搜索功能
   - roamlinks  # 支持 Obsidian 式双括号链接
-  - tags  # 标签支持
-  - git-revision-date-localized:  # 显示页面最后更新日期
-      enable_creation_date: true
 
 # 额外的 JavaScript 文件
 extra_javascript:
