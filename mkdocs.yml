@@ -1,67 +1,78 @@
+# 网站名称
 site_name: obsidian-mkdocs template
 
+# 网站主题配置
 theme:
-    name: 'material'
-    palette:
+    name: 'material'  # 使用 Material for MkDocs 主题
+    palette:  # 配色方案设置
 
-    # Light mode
+    # 亮色模式配置
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: pink
-      accent: indigo
+      primary: pink  # 主色调
+      accent: indigo  # 强调色
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
+        name: Switch to dark mode  # 切换到暗色模式按钮文本
 
-    # Dark mode
+    # 暗色模式配置
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: pink
-      accent: blue
+      primary: pink  # 主色调
+      accent: blue  # 强调色
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
+        name: Switch to light mode  # 切换到亮色模式按钮文本
+    
+    # 优化：添加导航和搜索功能设置
+    features:
+      - navigation.instant  # 即时加载页面
+      - navigation.tracking  # 网址随滚动更新
+      - navigation.tabs  # 顶部导航标签
+      - navigation.top  # 返回顶部按钮
+      - search.suggest  # 搜索建议
+      - search.highlight  # 搜索结果高亮
 
-# Extensions
+# Markdown 扩展配置
 markdown_extensions:
-  - footnotes
-  # - attr_list
-  - pymdownx.arithmatex:
+  - footnotes  # 脚注支持
+  - attr_list  # 属性列表，用于添加图片尺寸、CSS类等 (取消注释)
+  - pymdownx.arithmatex:  # 数学公式支持
       generic: true
-  # - pymdownx.superfences
-  # - pymdownx.details
-  # - pymdownx.magiclink
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - def_list
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.superfences:
+  - pymdownx.details  # 可折叠内容 (取消注释)
+  - pymdownx.magiclink  # 自动链接生成 (取消注释)
+  - pymdownx.tasklist:  # 任务列表
+      custom_checkbox: true  # 自定义复选框样式
+  - def_list  # 定义列表
+  - pymdownx.critic  # 编辑标记
+  - pymdownx.caret  # 上标支持
+  - pymdownx.keys  # 按键显示
+  - pymdownx.mark  # 文本高亮
+  - pymdownx.tilde  # 删除线和下标
+  - pymdownx.superfences:  # 增强型代码围栏，支持多种语言和图表
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!str mermaid
 
-  - toc:
-      permalink: true
+  - toc:  # 目录生成
+      permalink: true  # 为标题添加永久链接
 
+# 插件配置
 plugins:
-  - search
-  - roamlinks
-  - blog
-  - rss:
-      match_path: blog/posts/.* 
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags
+  - search  # 搜索功能
+  - roamlinks  # 支持 Obsidian 式双括号链接
+  - tags  # 标签支持
+  - git-revision-date-localized:  # 显示页面最后更新日期
+      enable_creation_date: true
 
+# 额外的 JavaScript 文件
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://unpkg.com/mermaid/dist/mermaid.min.js 
+  - javascripts/mathjax.js  # MathJax 配置
+  - https://polyfill.io/v3/polyfill.min.js?features=es6  # ES6 兼容性
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # MathJax 核心
+  - https://unpkg.com/mermaid/dist/mermaid.min.js  # Mermaid 图表支持
+
+# 优化：添加额外的 CSS 文件
+extra_css:
+  - stylesheets/extra.css  # 自定义 CSS

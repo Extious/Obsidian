@@ -1,5 +1,5 @@
 ---
-title: Author
+title: Homepage
 tags:
   - about
 update: 2025-04-06
