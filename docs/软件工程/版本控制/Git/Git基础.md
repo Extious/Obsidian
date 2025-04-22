@@ -4,7 +4,7 @@ tags:
   - git
 update: 2025-04-06
 ---
-   ## 安装git
+## 安装git
 网址[https://git-scm.com/downloads](https://git-scm.com/downloads)上安装
 安装之后要设置自身全局配置
 ```bash
@@ -20,7 +20,7 @@ git init
 ```bash
 git add <file>
 ```
-# 分支管理
+## 分支管理
 可视化教程参考[git分支管理教程](https://learngitbranching.js.org/?locale=zh_CN)
 ## 本地
 ### status

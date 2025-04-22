@@ -4,9 +4,9 @@ tags:
   - svn
 update: 2025-04-06
 ---
-# SVN简介
+## SVN简介
 Subversion(SVN) 是一个开源的集中式版本控制系統, 也就是说 Subversion 管理着随时间改变的数据。  这些数据放置在一个中央资料档案库(repository) 中。 这个档案库很像一个普通的文件服务器, 不过它会记住每一次文件的变动。  这样你就可以把档案恢复到旧的版本, 或是浏览文件的变动历史。
-# SVN特点
+## SVN特点
 * 统一版本号：Subversion下，任何一次提交都会对所有文件增加到同一个新版本号，即使是提交并不涉及的文件，版本号相同的文件构成软件的一个版本。
 * 原子提交：一次提交不管是单个还是多个文件，都是作为一个整体提交的。在这当中发生的意外例如传输中断，不会引起数据库的不完整和数据损坏。
 * 多级管理系统：
@@ -14,8 +14,8 @@ Subversion(SVN) 是一个开源的集中式版本控制系統, 也就是说 Subv
   * 目录管理员：对指定的目录/SVN库进行权限管理
   * 普通用户：可以查看用户名、查看权限设置、修改自己的密码。
 * 自动合并：源代码以行为单位。
-# 客户端
-## checkout
+## 客户端
+### checkout
 * 通过`svn://192.168.0.1(具体的svn服务器地址)/CurryCoder01 --username=user01`，如下所示：
 ```bash
 svn checkout svn://192.168.0.1/CurryCoder01 --username=user01
@@ -26,11 +26,11 @@ svn checkout svn://192.168.0.1/CurryCoder01 --username=user01
 # drwxr-xr-x 2 root root  tags/
 # drwxr-xr-x 2 root root  trunk/
 ```
-## update
+### update
 在推送前使用`svn update`合并之前其他人的提交
 再使用`svn commit -m ""`提交自己的修改
-# 服务端
-## 创建版本库
+## 服务端
+### 创建版本库
 * 创建版本库目录
 ```bash
 sudo mkdir /opt/svn
@@ -59,7 +59,7 @@ svnserve -d -r /opt/svn/CurryCoder
 ```bash
 svnserve -d -r /opt/svn
 ```
-## 配置参数
+### 配置参数
 * 配置参数
 * 服务配置：**`/opt/svn/CurryCoder/conf/svnserve.conf`
 ```

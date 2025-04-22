@@ -4,8 +4,8 @@ tags:
   - golang
 update: 2025-04-05
 ---
-# 环境配置
-## Linux下go环境安装
+## 环境配置
+### Linux下go环境安装
 在官网上安装源码`.tar.gz`文件
 将文件解压到系统中
 ```shell
@@ -19,11 +19,11 @@ export PATH=$PATH:/usr/local/src/go/bin:$GOPATH/bin
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn
 ```
-## go语言特性
+### go语言特性
 静态编译型语言
 - 静态：强类型，在编译的时候就确定
 - 编译型：相对于解释型少一个解释器，直接由源代码编译得到二进制程序
-## 第一个go语言程序
+### 第一个go语言程序
 ```go
 // 每一个可执行的 golang 程序必定具备一个 main 包，并在该 main 包下具有执行函数 main 的 go 文件
 package main
@@ -122,34 +122,34 @@ func main()  {
  
 }
 ```
-## 编译工具
+### 编译工具
 1. ​go run​命令直接编译执行：`go run HelloGo.go​`
 2. ​go build​ 命令先编译得到可执行文件
     1. ​`go build -o HelloGo HelloGo.go`​ 或者 `go build HelloGo.go​` 会生成一个`HelloGo`可执行文件。
-# 基本语法
-## 变量声明和初始化
-### 基本样式
+## 基本语法
+### 变量声明和初始化
+#### 基本样式
 1. ​var name TYPE​
 2. ​var name TYPE = 表达式​
 3. ​var a = 100​ 或 b:= "hello"​
 > 注意：:=​ 不能用于全局变量的声明和初始化,同时其左值中的变量最少有一个变量必须是未定义过的变量
-### 多重赋值
-**交换a,b的值可以使用 **a,b = b,a​
-### 匿名变量
-**函数使用多返回值时，使用 **a,_:=getName()​ _为匿名变量，不占用命名空间和内存
-## 数据类型
-### 整型
+#### 多重赋值
+交换a,b的值可以使用 a,b = b,a​
+#### 匿名变量
+函数使用多返回值时，使用 a, _ :=getName()​ _ 为匿名变量，不占用命名空间和内存
+### 数据类型
+#### 整型
 - 按长度：int8,int16,int32,int64
 - 按有无符号：uint8,uint16,uint32,uint64
-### 浮点型
+#### 浮点型
 两种：float32和float64
-### 布尔型
+#### 布尔型
 true和fasle
 > 注意：bool与整型不能转换，bool型不能参与数值运算
-### 字符串型
+#### 字符串型
 String
 >注意遍历字符串的时候可以以byte和rune两种方式，具体参考[字符类型：byte和rune](http://c.biancheng.net/view/18.html#:~:text=Go%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B%EF%BC%88byte%E5%92%8Crune%EF%BC%89%201%20%E4%B8%80%E7%A7%8D%E6%98%AF%20uint8%20%E7%B1%BB%E5%9E%8B%EF%BC%8C%E6%88%96%E8%80%85%E5%8F%AB%20byte%20%E5%9E%8B%EF%BC%8C%E4%BB%A3%E8%A1%A8%E4%BA%86%20ASCII,UTF-8%20%E5%AD%97%E7%AC%A6%EF%BC%8C%E5%BD%93%E9%9C%80%E8%A6%81%E5%A4%84%E7%90%86%E4%B8%AD%E6%96%87%E3%80%81%E6%97%A5%E6%96%87%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96%E5%A4%8D%E5%90%88%E5%AD%97%E7%AC%A6%E6%97%B6%EF%BC%8C%E5%88%99%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%20rune%20%E7%B1%BB%E5%9E%8B%E3%80%82%20rune%20%E7%B1%BB%E5%9E%8B%E7%AD%89%E4%BB%B7%E4%BA%8E%20int32%20%E7%B1%BB%E5%9E%8B%E3%80%82) 默认for range遍历使用rune方式
-### 类型断言
+#### 类型断言
 ```go
 x.(T)
 ```
@@ -179,9 +179,9 @@ func main() {
     }
 }
 ```
-### 泛型
+#### 泛型
 [泛型参考链接](https://juejin.cn/post/7080938405449695268)
-## 指针
+### 指针
 具体内容和C语言差不多，只不过限制了指针类型的偏移和运算能力，增加了自动垃圾回收机制
 【实例】使用flag从命令行中读取参数
 ```go
@@ -200,7 +200,7 @@ flag.Parse()
 fmt.Printf("I am %v %v,and my id is %v\n",*surname,personalName,*id)
 }
 ```
-**在命令行中输入 **go run Flag.go -surname="苍" -personalName="小屋" -id=100​ 得到输出：I am 苍 小屋，and my id is 100​
+在命令行中输入 go run Flag.go -surname="苍" -personalName="小屋" -id=100​ 得到输出：I am 苍 小屋，and my id is 100​
 Flag支持
 ```shell
 -id=100
@@ -208,44 +208,44 @@ Flag支持
 -id 100
 --id 100
 ```
-## 常量与类型别名
-### 常量
+### 常量与类型别名
+#### 常量
 使用const关键字
-### 类型别名
+#### 类型别名
 - 定义类型别名：`type name = TYPE`
 - 定义新类型：`type name TYPE`
-## 分支循环
-### 条件语句
+### 分支循环
+#### 条件语句
 - `If else`条件语句注意与if匹配的`"{"`和`if`在同一行；`else`必须与上一个分支的`"}"`位于同一行
 - `switch`语句不需要用`break`，可以用`fallthrough`关键字连接两个`case`；可以对字符串和复杂表达式进行判断；可以写成`if-else`类型：`switch`后没有变量，`case`后接条件判断表达式。
-### 循环
+#### 循环
 只有一种`for`循环
 ```go
 for init;condition;end{
 循环体
 }
 ```
-# 常见容器
-## 数组
+## 常见容器
+### 数组
 声明初始化的几种方式
 ​`var name [size]TYPE​`
 `​name := [...]string{"xiaoming","xiaohong","xiaoli"}​`
 ​`name := new([size]TYPE)​`
 使用指针操作数组时不支持偏移和运算。
-## 切片
-### 从原生数组中生成切片
+### 切片
+#### 从原生数组中生成切片
 ​`slice := source[begin:end]​`包括`begin`不包括`end`；修改切片相当于修改数组
-### 动态创建切片
+#### 动态创建切片
 ​`make([]TYPE,size,cap)​`得到的切片会被初始化为其类型的初始值
-### 声明新的切片
+#### 声明新的切片
 ​`var name []TYPE​`相当于声明数组时没有设置大小
-### 向切片中添加元素
+#### 向切片中添加元素
 使用append函数
 `size<=cap`时：更新原数组
 `size>cap`时：申请新空间
 > 可以使用 `copy(destSli,srcSli []TYPE)​` 复制切片
-## 列表与字典
-### 列表
+### 列表与字典
+#### 列表
 双向有序链表，每个节点可以是不同的数据类型
 引入`container/list`包
 初始化：`var name list.List​ or name := list.New()​`
@@ -255,7 +255,7 @@ for init;condition;end{
 - `Remove(element)`
 - 头元素：`Front()`
 - 下一个元素：`Next()`
-### 字典
+#### 字典
 初始化
 ```go
 //声明
@@ -271,7 +271,7 @@ classMates2 := map[int]string{
 ```
 判断map中某个键是否存在
 ​`value,ok := classmate2[1]​ if 存在 then ok为true.`
-## 容器遍历
+### 容器遍历
 使用`for-range`遍历
 ```golang
 for k,v := range nums{
@@ -279,8 +279,8 @@ for k,v := range nums{
 }
 ```
 > 注意：遍历循环体中对k，v修改不会影响到原容器的内容
-# 函数与接口
-## 函数的声明和参数传递
+## 函数与接口
+### 函数的声明和参数传递
 具体样式
 ```go
 func name(params)(return params){
@@ -295,10 +295,10 @@ func swap(x, y string) (string, string) {
 x,y=swap(x,y)
 ```
 > 注意：如果函数需要在包外的代码使用，则函数名要大写
-## 匿名函数和闭包
+### 匿名函数和闭包
 匿名函数：初始化和调用一起
 主要用于回调函数和闭包
-### 回调函数
+#### 回调函数
 函数作为参数传递，实现回调。
 ```go
 package main
@@ -324,7 +324,7 @@ func callBack(x int) int {
     return x
 }
 ```
-### 闭包
+#### 闭包
 携带状态的函数叫做闭包，包的是函数和变量环境
 ```go
 package main
@@ -354,7 +354,7 @@ func main(){
    fmt.Println(nextNumber1())
 }
 ```
-## 接口声明和嵌套
+### 接口声明和嵌套
 接口：调用方和实现方约定的一种合作协议。调用者不关心接口的实现方式，实现者通过接口暴露自己的内在功能。每个接口有一个或多个方法
 > 注意：只有当接口名和方法名的首字母都为大写的时候，表示公开，包外可以被访问
 ```go
@@ -365,7 +365,7 @@ type interfaceName interface{
 }
 ```
 接口是可以嵌套的
-## 函数体实现接口
+### 函数体实现接口
 go语言中的所有类型都可以实现接口
 首先定义一个接口：
 ```go
@@ -392,8 +392,8 @@ func main(){
     printer.Print("Golang is good!")
 }
 ```
-# 结构体和方法
-## 结构体定义
+## 结构体和方法
+### 结构体定义
 样式
 ```go
 type structName struct{
@@ -403,8 +403,8 @@ type structName struct{
 }
 ```
 > 注意：结构体公开则其名首字母大写；字段公开则字段名首字母大写
-## 结构体的实例化和初始化
-### 实例化
+### 结构体的实例化和初始化
+#### 实例化
 声明实例化
 ```go
 var p1 Person
@@ -420,7 +420,7 @@ p2.Name = "xiaohong"
 p3 := &Person{}
 p3.Name = "xiaozhang"
 ```
-### 初始化
+#### 初始化
 ```go
 p4 := &Person{
     Name:"xiaowang",
@@ -428,7 +428,7 @@ p4 := &Person{
 }
 //如果所有字段都初始化，可以按顺序省略字段名
 ```
-## 方法和接收器
+### 方法和接收器
 方法定义样式
 ```go
 func (recipient recipientType) methodName(params)(return params){
@@ -436,7 +436,7 @@ function body
 }
 ```
 > 注意：接收器最好选用指针类型
-## 结构体实现接口
+### 结构体实现接口
 接口Cat,Dog定义+实现结构体CatDog定义+接口（方法）实现
 具体实现：
 ```go
@@ -446,9 +446,9 @@ var car Cat
 cat = catDog
 cat.CatchMouse()
 ```
-## 内嵌和组合
+### 内嵌和组合
 结构体内部可以内嵌结构体，也可有匿名字段
-### 继承
+#### 继承
 ```go
 type Animal struct {
     name string

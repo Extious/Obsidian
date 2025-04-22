@@ -4,8 +4,8 @@ tags:
   - git
 update: 2025-04-06
 ---
-# git相关问题记录
-## ssl证书问题
+## git相关问题记录
+### ssl证书问题
 问题描述：
 在用steam++的host代理模式时，使用git clone时出现ssl证书的问题如下
 ```bash
@@ -20,7 +20,7 @@ git config -l --show-origin
 git config --global http.sslBackend schannel
 ```
 [参考链接](https://github.com/desktop/desktop/issues/9293)
-## https代理问题
+### https代理问题
 问题描述：
 **使用clash梯子时，git还是没有走梯子这个代理，所以git使用https方式clone时还是超时报错，默认从443端口访问，可以配置代理到7890可代理端口上**
 问题解决：
@@ -29,7 +29,7 @@ git config --global http.proxy 127.0.0.1:7890
 git config --global https.proxy 127.0.0.1:7890
 ```
 [参考链接](https://blog.csdn.net/zpf1813763637/article/details/128340109)
-## ssh代理问题
+### ssh代理问题
 问题描述：
 使用clash梯子时，ssh并没有走梯子这个代理，所以还是连不到github，默认从22端口访问，可以将配置代理到443端口，走“问题2”的流程
 问题解决：

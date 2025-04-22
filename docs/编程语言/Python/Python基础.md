@@ -4,8 +4,8 @@ tags:
   - python
 update: 2025-04-05
 ---
-# 基础语法
-## print
+## 基础语法
+### print
 python代码一行行执行，字符串过长需要使用三引号
 三引号可以直接换行
 ```python
@@ -13,22 +13,22 @@ print('''
 ni
 hao‍‍```)
 ```
-## 命名规范
+### 命名规范
 1. 字母全部小写
 2. 不同单词使用下划线分割
-## 数据类型
-### str
-### int
-### float
-### bool
+### 数据类型
+#### str
+#### int
+#### float
+#### bool
 True
 False
-### NoneType
+#### NoneType
 None
-## 交互
+### 交互
 input函数
 （等同于C语言中的scanf）
-## 条件语句
+### 条件语句
 ```python
 if 20>3:
 	print(True)
@@ -36,13 +36,13 @@ else:
 	print(False)
 ```
 多层及使用elif关键字
-## 列表
+### 列表
 动态链表
-## 字典
+### 字典
 通过[]取得key对应value
-### 元组
+#### 元组
 不可变列表
-## for循环
+### for循环
 可迭代对象：
 * str
 * 列表
@@ -52,13 +52,13 @@ else:
 for i in range(1,1,101):
 	total = total + i
 ```
-## 函数
+### 函数
 ```python
 def func1(x):
 	print(x)
 	return x+1
 ```
-## Class
+### Class
 ```python
 class CuteCat:
 	def __init__(self,cat_name,cat_age):
@@ -70,7 +70,7 @@ class CuteCat:
 class Cat(Mammal):
 	# def ...
 ```
-## 文件操作
+### 文件操作
 ```python
 # 使用with省略close
 with open("./data.txt") as f:
@@ -81,7 +81,7 @@ with open("./data.txt") as f:
 * r
 * a
 * r+
-## 异常处理
+### 异常处理
 ```python
 try:
 	# ...
@@ -94,9 +94,9 @@ else:
 finally:
 	# ...
 ```
-## 测试
-# 虚拟环境配置
-# Pyenv
+### 测试
+## 虚拟环境配置
+## Pyenv
 使用pyenv可以进行多版本管理
 安装（下述三条命令等效）：
 ```bash
@@ -143,7 +143,7 @@ $ pyenv global 3.12.2
 # 查看当前Python版本
 $ python --version
 ```
-## 创建、激活、停用及删除 virtualenv
+### 创建、激活、停用及删除 virtualenv
 创建名为 `venv` 的 virtualenv 环境：
 ```bash
 pyenv virtualenv 3.5.2 venv

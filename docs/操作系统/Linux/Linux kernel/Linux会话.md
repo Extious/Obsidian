@@ -5,10 +5,10 @@ tags:
 update: 2025-04-05
 ---
 对于linux的终端内会话的管理，本文章介绍nohup和tmux的使用
-# nohup
-## 介绍
+## nohup
+### 介绍
 nohup 英文全称 no hang up（不挂起），用于在系统后台不挂断地运行命令，退出终端不会影响程序的运行。nohup 命令，在默认情况下（非重定向时），会输出一个名叫 nohup.out 的文件到当前目录下，如果当前目录的 nohup.out 文件不可写，输出重定向到 $HOME/nohup.out 文件中。
-## 语法使用
+### 语法使用
 ```bash
 nohup command [arg...] [ &]
 ```
@@ -34,7 +34,7 @@ jobs -l
 ```bash
 kill -9 [pid]
 ```
-# tmux
+## tmux
 命令行的典型使用方式是，打开一个终端窗口（terminal window，以下简称&quot;窗口"），在里面输入命令。用户与计算机的这种临时的交互，称为一次"**会话**"（session）。Tmux 就是会话与窗口的&quot;解绑&quot;工具，将它们彻底分离。和screen的功能比较类似，但是tmux的功能更强大：
 ```bash
 # tmux的层次：
@@ -49,7 +49,7 @@ kill -9 [pid]
 ---window3
 ---window4
 ```
-## 常用方法
+### 常用方法
 ```bash
 # 开启新session
 tmux
@@ -97,7 +97,7 @@ Ctrl + b " #将当前窗口分成上下两分
 Ctrl + b 方向键 #让光标在不同的窗口中跳转 
 Ctrl + b 方向键 #按住C+b不放，同时按住方向键，可以调节光标所在窗口的大小 
 ```
-## 结对编程
+### 结对编程
 通过ssh连上服务器之后使用tmux进入同一个session可以共享屏幕和操作，非常适合结对编程。
-## 参考链接
+### 参考链接
 [Tmux使用教程](https://www.ruanyifeng.com/blog/2019/10/tmux.html)

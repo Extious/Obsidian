@@ -5,14 +5,14 @@ tags:
   - linux
 update: 2025-04-05
 ---
-# 什么是SSH
+## 什么是SSH
 **Secure Shell** (**SSH**) 是一个允许两台电脑之间通过安全的连接进行数据交换 的**网络协议**。
 * 传统：FTP、Telnet 是再网络中明文传送数据、用户帐号和密码，很容易受到中间人攻击 。
 * SSH：利用 SSH 协议 可以有效防止远程管理过程中的信息泄露问题。通过SSH可以对所有传输的数据进行加 密，也能够防止 DNS 欺骗和 IP 欺骗。
 > 补充：SSH使用的是非对称加密的一种：使用公钥和私钥进行加密和解密，一般使用公钥加密，私钥解密。
 
 SSH的身份验证阶段，SSH只支持服务端保留公钥，客户端保留私钥的方式，** 所以方式只有两种：客户端生成密钥对，将公钥分发给服务端；服务端生成密钥对，将私钥分发给客户端。只不过出于安全性和便利性，一般都是客户端生成密钥对并分发公钥。
-# SSH概要
+## SSH概要
 * SSH是会话层上的协议
 * SSH服务的守护进程是sshd,默认监听在22端口
 * SSH客户端命令读取两个配置文件,也可以在输入命令时配置。
@@ -25,7 +25,7 @@ SSH的身份验证阶段，SSH只支持服务端保留公钥，客户端保留�
 * SSH服务端配置文件为/etc/ssh/sshd_config（与客户端配置文件区分开）
 ![image](https://picture.zhaozhan.site/ssh-config.png)
 * 易被忽略：SSH登陆会被分配一个伪终端，可以配置sudo这种身份验证程序被禁止使用**
-# 主机验证过程
+## 主机验证过程
 客户端输入以下命令之后，首先进行主机验证过程**
 ```bash
 ssh ip_addr
@@ -36,11 +36,11 @@ ssh ip_addr
 > 补充：实际上ssh对比的不是host key,因为太长了，对比的是host key的指纹。指纹可以通过ssh-kegen计算得出。ssh还支持host key的模糊比较（图形对比）。**
 
 更详细的主机认证过程是：先进行密钥交换(DH算法)生成session key(rfc文档中称之为shared secret)，然后从文件中读取host key，并用host key对session key进行签名，然后对签名后的指纹进行判断.
-# 身份认证过程
+## 身份认证过程
 常见的身份认证为密码认证和公钥认证，当公钥认证机制未通过时，再进行密码认证机制。认证顺序可以通过ssh配置文件中的指令PerferredAuthentications改变。
 * 公钥认证：客户端需将自己生成的公钥（~/.ssh/id_\*.pub）发送到服务端的~/.ssh/authorized_keys文件中。认证时将私钥推导或者公钥指纹（不同版本）发给服务端。服务端判断是否认证通过，如果认证不通过，则进入下一个认证机制：密码认证机制。**
 * 密码认证：输入服务端用户密码。
-# 配置文件分布
+## 配置文件分布
 服务端：
 *  /etc/ssh/sshd_config：ssh服务程序sshd的配置文件。
 * /etc/ssh/ssh_host_\*：服务程序sshd启动时生成的服务端公钥和私钥文件。如ssh_host_rsa_key和ssh_host_rsa_key.pub。
@@ -151,7 +151,7 @@ Host *
         GSSAPIAuthentication yes
 ```
 关于上述配置文件的相关内容参考[相关链接](https://www.cnblogs.com/f-ck-need-u/p/7129122.html)
-# ssh命令
+## ssh命令
 ```bash
 ssh [options] [user@]hostname [command]
 参数说明：
@@ -184,7 +184,7 @@ cat ~/.ssh/id_ed25519.pub | ssh ip_addr "umask 077; test -d ~/.ssh || mkdir ~/.s
 #该命令可以直接将公钥分发给服务端，具体实现逻辑和上述命令相同
 ssh-copy-id ip_addr 
 ```
-# scp命令
+## scp命令
 scp是基于ssh的远程拷贝命令，也支持本地拷贝，甚至支持远程到远程的拷贝。scp拷贝是使用的22端口，其实质是使用ssh连接到远程，并使用该连接来传输数据。
 具体使用方式如下：
 ```bash
@@ -216,7 +216,7 @@ scp ip_addr:/etc/fstab /tmp/a.txt
 ```bash
 scp ip_addr1:/etc/fstab ip_addr2:/tmp/a.txt
 ```
-# 生成密钥对
+## 生成密钥对
 ssh-keygen 命令用于为 ssh 生成、管理和转换认证密钥，它支持 RSA 和 DSA 两种认 证密钥。
 该命令的选项：
 ```bash
@@ -260,5 +260,5 @@ ssh-keygen -t ed25519 -C "注释" # 默认的密钥文件中将带有ed25519，�
 公钥加密指纹 fingerprint 有两种形式：
 * 之前的十六进制形式：`16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48`
 * 现在使用 sha256 哈希值并且使用 base64 进行格式 ：`SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8`
-# 参考文章
+## 参考文章
 [ssh和ssh服务](https://junmajinlong.com/linux/ssh/)

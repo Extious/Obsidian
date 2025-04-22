@@ -4,10 +4,10 @@ tags:
   - gpu
 update: 2025-04-05
 ---
-# 单机多卡
-## GPU Direct
+## 单机多卡
+### GPU Direct
 GPU Direct 是 NVIDIA 开发的一项技术，可实现 GPU 与其他设备（例如网络接口卡 (NIC) 和存储设备）之间的直接通信和数据传输，而不涉及 CPU。
-### GPUDirect Storge
+#### GPUDirect Storge
 GPUDirect Storage 允许存储设备和 GPU 之间进行直接数据传输，绕过 CPU，减少数据传输的延迟和 CPU 开销。
 通过 GPUDirect Storage，GPU 可以直接从存储设备（如固态硬盘（SSD）或非易失性内存扩展（NVMe）驱动器）访问数据，而无需将数据先复制到 CPU 的内存中。这种直接访问能够实现更快的数据传输速度，并更高效地利用 GPU 资源。
 
@@ -23,5 +23,5 @@ GPUDirect Storage 允许存储设备和 GPU 之间进行直接数据传输，绕
 * GPUDirect RDMA
 * GPUDirect P2P
 * GPUDirect 视频
-# 参考文章
+## 参考文章
 [聊透 GPU 通信技术——GPU Direct、NVLink、RDMA - 又拍云 - 博客园](https://www.cnblogs.com/upyun/p/17679500.html)

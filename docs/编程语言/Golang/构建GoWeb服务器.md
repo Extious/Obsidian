@@ -34,7 +34,7 @@ http请求由请求行（Request Line）和请求头部(Header)、空行和请�
 3. 浏览器发送`HTTP Request`
 4. 服务器接受到`HTTP Request`之后响应`HTTP Response`给浏览器
 5. 浏览器接收完`HTTP Response`之后断开`tcp`连接
-# 使用Go语言构建服务器
+## 使用Go语言构建服务器
 【实例】
 ```go
 package main
@@ -67,8 +67,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
     即可得到响应结果
 */
 ```
-# 接收和处理请求
-## Web工作中的几个概念
+### 接收和处理请求
+#### Web工作中的几个概念
 `net/http`标准库中由客户端和服务端两个部分
 - 服务端：`Server,ServerMux,Handler/HandlerFunc,Header,Request,Cookie`
 - 客户端：`Client,Response,Header,Request,Cookie`
@@ -77,14 +77,14 @@ Conn:表示用户每次请求链接
 1. 创建`Listen Socket`，监听指定的端口，等待客户端的请求
 2. `Listen Socke`t接收到请求，得到`Client Socket`，通过`Client Socket`与客户端通信
 3. 服务端处理请求：从`Client Socket`中读取请求体，交给`Handler`处理，将响应体通过`Client Socket`写给客户端
-## 处理器处理请求
+### 处理器处理请求
 流程：
 1. `ListenAndServe`进行监听：`net.Listen("tcp",addr)`
 2. 接收请求并创建连接`Conn：srv.Serve(l net.Listener)`：进入循环`{rw := Accept();c := srv.NewConn();go c.serve()}`
 3. 处理链接`conn.serve()`：分析请求，映射`url`
-## 解析请求体
+### 解析请求体
 具体可见"使用Go语言构建服务器"中的【实例】
-## 返回响应体
+### 返回响应体
 主要通过接口`ResponseWriter`接口中的方法：
 ```go
 type ResponseWriter interface{
@@ -93,10 +93,10 @@ type ResponseWriter interface{
     WriteHeader(statusCode int)    //修改状态码：默认是200
 }
 ```
-# 实践案例：Golang Web 框架 Gin 实践
-## Gin安装
+## 实践案例：Golang Web 框架 Gin 实践
+### Gin安装
 ​`go get -u github.com/gin-gonic/gin​`
-## 使用方式
+### 使用方式
 直接引入：
 ```go
 import(
@@ -104,7 +104,7 @@ import(
     "net/http"//可选，当使用http.StatusOK（200的状态码）这类的常量的时候需引入
 ）
 ```
-## 使用Gin实现HTTP服务器
+### 使用Gin实现HTTP服务器
 ```go
 package main
 import "github.com/gin-gonic/gin"
@@ -118,7 +118,7 @@ func main(){
     router.Run(:8000)    //通过Run方法启动监听路由
 }
 ```
-## Restful API
+### Restful API
 常用`Restful`方法有：`GET,PUT,POST,DELETE`等
 路由的一些使用技巧和方式：
 比如：由中携带参数
@@ -132,7 +132,7 @@ router.GET("/user/:name",func(c *gin.Context){
 gin还提供了`router`处理参数：
 ​`router.GET("/user/:name/action",func​`这个时候处理器可以匹配到 `/user/Extious/​,/user/Extious/Send​,/user/Extious​`
 > 注意：路由参数是指API参数和URL参数不同，URL参数是路由之后 `/api?name="Extious"​` 里边`name`这种，需要用到`Query()`等方法遍历到
-## gin中间件
+### gin中间件
 中间件的意思是对一组接口的统一操作，常用于：记录`log`，错误`handler`，对部分接口的鉴权
 ```go
 package main
@@ -165,5 +165,5 @@ func AuthMiddleware() gin.HandlerFunc {
     }
 }
 ```
-# 服务端数据存储
+## 服务端数据存储
 MySQL采用gorm的一系列接口
